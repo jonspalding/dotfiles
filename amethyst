@@ -1,0 +1,7 @@
+{
+  "floating": [
+    "com.apple.systempreferences",
+    "com.valvesoftware.steam"
+  ],
+  "enables-layout-hud-on-space-change": false,
+}
