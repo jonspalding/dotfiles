@@ -1,1 +1,0 @@
-("~/Downloads/Alex Paukste/" "~/workspace/invisiblehand/flowjob/" "~/workspace/invisiblehand/products/" "~/.dotfiles/oh-my-zsh/" "~/.oh-my-zsh/" "~/Documents/code-tests/Adam Cryer/")
