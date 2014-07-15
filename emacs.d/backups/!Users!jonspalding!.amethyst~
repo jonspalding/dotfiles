@@ -1,7 +1,0 @@
-{
-  "floating": [
-    "com.apple.systempreferences",
-    "Steam"
-  ],
-  "enables-layout-hud-on-space-change": false,
-}
