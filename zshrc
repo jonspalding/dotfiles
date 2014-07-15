@@ -75,3 +75,5 @@ export PATH="./bin:~/bin:/usr/local/bin:/usr/local/var/rbenv/shims:/usr/local/sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export DEFAULT_USER="jonspalding"
+
+alias vssh="ssh -A jonspalding@localhost -p 2222"
