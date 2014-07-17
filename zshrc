@@ -77,3 +77,16 @@ export PATH="./bin:~/bin:/usr/local/bin:/usr/local/var/rbenv/shims:/usr/local/sh
 export DEFAULT_USER="jonspalding"
 
 alias vssh="ssh -A jonspalding@localhost -p 2222"
+
+# The default umask is now handled by pam_umask.
+# See pam_umask(8) and /etc/login.defs.
+
+         # Load stuff from bash on Ubuntu machines that are using profile.d
+if [ -d /etc/profile.d ]; then
+  for i in /etc/profile.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
