@@ -90,3 +90,7 @@ if [ -d /etc/profile.d ]; then
   done
   unset i
 fi
+
+export JAVA_TOOLS_JAR=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/lib/tools.jar
+export AM_ZK_HOSTS=10.0.0.210
+export AM_ZK_ROOT=jonspalding
