@@ -1,2 +1,7 @@
 .DS\_Store
 .scratchpad.*
+scratchfile.*
+.idea/*
+*.iml
+.lein-repl-history
+.lein-failures

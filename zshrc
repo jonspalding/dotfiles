@@ -12,7 +12,7 @@ ZSH_THEME="agnoster"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -30,7 +30,7 @@ ZSH_THEME="agnoster"
 # DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -55,18 +55,18 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="./bin:~/bin:/usr/local/bin:/usr/local/var/rbenv/shims:/usr/local/share/npm/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/bin:/bin:/Users/jonspalding/Dropbox/tools/aws/ec2-api-tools/bin:/Users/jonspalding/Dropbox/tools/aws/cloud-search-tools/bin:/Users/jonspalding/Dropbox/tools/aws/elb-api-tools/bin:/Users/jonspalding/Dropbox/tools/aws/as-api-tools/bin:/bin"
+export PATH="./bin:/Users/jonspalding/bin:/usr/local/bin:/usr/local/var/rbenv/shims:/usr/local/share/npm/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/bin:/bin:/Users/jonspalding/Dropbox/tools/aws/ec2-api-tools/bin:/Users/jonspalding/Dropbox/tools/aws/cloud-search-tools/bin:/Users/jonspalding/Dropbox/tools/aws/elb-api-tools/bin:/Users/jonspalding/Dropbox/tools/aws/as-api-tools/bin:/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='atom'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -94,3 +94,7 @@ fi
 export JAVA_TOOLS_JAR=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/lib/tools.jar
 export AM_ZK_HOSTS=10.0.0.210
 export AM_ZK_ROOT=jonspalding
+
+eval "$(rbenv init - --no-rehash - zsh)"
+
+alias npm-exec='PATH=$(npm bin):$PATH'

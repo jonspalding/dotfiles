@@ -5,6 +5,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
 	excludesfile = ~/.gitignore
+	editor = vi
 [user]
 	name = Jon Spalding
 	email = jon.spalding@googlemail.com
@@ -18,3 +19,11 @@
 	trustExitCode = true
 [push]
 	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
